@@ -1,0 +1,15 @@
+{
+    "name": "ldh/esquel",
+    "description": "A small library to aid writing sql queries.",
+    "type": "library",
+    "require-dev": {
+        "symfony/var-dumper": "^7.2"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "LDH\\Esquel\\": "src/"
+        }
+    },
+    "require": {}
+}
