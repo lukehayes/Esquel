@@ -33,6 +33,13 @@ final class RawTest extends TestCase
 
     public function testCanResetSqlQuery()
     {
-        $this->markTestSkipped();
+        $this->rawObj->setQuery("TEST");
+
+        $this->rawObj->resetQuery();
+
+        $this->assertEquals(
+            $this->rawObj->getQuery(),
+            ""
+        );
     }
 }
