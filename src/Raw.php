@@ -8,12 +8,12 @@ class Raw
 
 	public function __construct() {}
 
-	public function select() : Raw
-	{
-		$this->query .= "select ";
+		public function select() : Raw
+		{
+			$this->query .= "select ";
 
-		return $this;
-	}
+			return $this;
+		}
 
 	/**
 	 * Get the generated query string.
@@ -33,6 +33,16 @@ class Raw
 	public function resetQuery() : void
 	{
 		$this->query = "";
+	}
+
+	/**
+	 * Query Setter.
+	 *
+	 * @return string.
+	 */
+	public function setQuery(string $str) : void
+	{
+		$this->query = $str;
 	}
 }
 

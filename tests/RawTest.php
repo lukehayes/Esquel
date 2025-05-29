@@ -17,9 +17,16 @@ final class RawTest extends TestCase
     public function testSelect(): void
     {
         $this->markTestIncomplete();
+    public function testCanSetQuery(): void
+    {
+        $this->rawObj->setQuery("TEST");
+
+        $this->assertEquals(
+            $this->rawObj->getQuery(),
+            "TEST"
+        );
     }
 
-    public function testCanGetQuery(): void
     {
         $this->markTestIncomplete();
     }
