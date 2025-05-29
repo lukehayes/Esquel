@@ -14,7 +14,6 @@ final class RawTest extends TestCase
         $this->rawObj = new Raw();
     }
 
-    public function testSelect(): void
     public function testCanGetQuery(): void
     {
         $this->assertIsString(
@@ -37,8 +36,14 @@ final class RawTest extends TestCase
         );
     }
 
+    public function testGenerateSelect(): void
     {
-        $this->markTestIncomplete();
+        $query = $this->rawObj->select();
+
+        $this->assertEquals(
+            $query->getQuery(),
+            "select",
+        );
     }
 
     public function testCanResetSqlQuery()
