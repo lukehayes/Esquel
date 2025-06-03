@@ -32,6 +32,20 @@ class Raw
 	}
 
 	/**
+	 * Add table for the selected columns.
+	 *
+	 * @param string $table_name    The Table to search from.
+	 *
+	 * @return string.
+	 */
+	public function from(string $table_name) : Raw
+	{
+		$this->query .= " from " . $table_name;
+
+		return $this;
+	}
+
+	/**
 	 * Get the generated query string.
 	 *
 	 * @return string.

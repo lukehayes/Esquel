@@ -46,6 +46,19 @@ final class RawTest extends TestCase
         );
     }
 
+    public function testCanAddFromTable() : void
+    {
+        $query =
+            $this->rawObj
+            ->select('id', 'name')
+            ->from('users');
+
+        $this->assertEquals(
+            $query->getQuery(),
+            "select id, name from users",
+        );
+    }
+
     public function testCanResetSqlQuery()
     {
         $this->rawObj->setQuery("TEST");
