@@ -38,11 +38,11 @@ final class RawTest extends TestCase
 
     public function testGenerateSelect(): void
     {
-        $query = $this->rawObj->select();
+        $query = $this->rawObj->select('id', 'name');
 
         $this->assertEquals(
             $query->getQuery(),
-            "select",
+            "select id, name",
         );
     }
 
