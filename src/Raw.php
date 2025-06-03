@@ -10,7 +10,7 @@ class Raw
 
 		public function select() : Raw
 		{
-			$this->query .= "select ";
+			$this->query .= "select";
 
 			return $this;
 		}
