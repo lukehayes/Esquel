@@ -74,5 +74,15 @@ class Raw
 	{
 		$this->query = $str;
 	}
+
+	/**
+	 * Raw object to string magic method.
+	 *
+	 * @return string.
+	 */
+	public function __toString() : string
+	{
+		return $this->query;
+	}
 }
 

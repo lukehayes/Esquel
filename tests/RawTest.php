@@ -70,4 +70,11 @@ final class RawTest extends TestCase
             ""
         );
     }
+
+    public function testRawToString()
+    {
+        $query = $this->rawObj->getQuery();
+
+        $this->assertEquals($this->rawObj, $query);
+    }
 }
