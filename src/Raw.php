@@ -1,5 +1,4 @@
 <?php
-
 namespace LDH\Esquel;
 
 class Raw
